@@ -1,0 +1,12 @@
+.headerbg {
+	background: url(../images/cloth_pattern.jpg) repeat-x;
+	min-height: 80px;
+	border-bottom: none;
+}
+
+.header_logo {
+	background: url(../images/logo_title) no-repeat;
+	margin: 0 auto;
+	width: 101px;
+	height: 62px;
+}
