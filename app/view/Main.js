@@ -1,31 +1,17 @@
 Ext.define('FaFa.view.Main', {
-    extend: 'Ext.tab.Panel',
+    extend: 'Ext.Panel',
     xtype: 'main',
     requires: [
-        'Ext.Panel',
-		'FaFa.view.HeaderToolbar'
+        'FaFa.view.HeaderToolbar'
     ],
     config: {
-        tabBarPosition: 'bottom',
-
         items: [
             {
-                title: 'Welcome',
-                iconCls: 'home',
-
-                styleHtmlContent: true,
-                scrollable: true,
-
-                items: {
-                    docked: 'top',
-                    xtype: 'headertoolbar'
-                },
-
-                html: [
-                    "You've just generated a new Sencha Touch 2 project. What you're looking at right now is the ",
-                    "contents of <a target='_blank' href=\"app/view/Main.js\">app/view/Main.js</a> - edit that file ",
-                    "and refresh to change what's rendered here."
-                ].join("")
+                xtype: 'headertoolbar'
+            }, 
+			{				
+                html: "<h4>What is FAFA models about</h4><p>The first thing you should understand about the cloud is that it is not a physical thing. The cloud is a network of servers, and each server has a different function. Some servers use computing power to run applications</p>",
+				styleHtmlContent: true
             }
         ]
     }
