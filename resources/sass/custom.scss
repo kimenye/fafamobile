@@ -28,7 +28,7 @@
 		padding-right: 0px;
 		
 		.x-tab {
-			width: 33.333%;
+			width: 34%;
 			padding-top: 11px;
 			height: 46px;
 			padding-bottom: 5px;	
@@ -41,6 +41,18 @@
 				text-shadow: none;
 			}	
 		}		
+		
+		.x-tabbar-inner {
+//			div:nth-child(3) {
+//				width: 34%;
+//			}
+//			div:nth-child(2) {
+//				width: 33%;
+//			}
+//			div:nth-child(1) {
+//				width: 33%;
+//			}
+		}
 	}
 
 		
