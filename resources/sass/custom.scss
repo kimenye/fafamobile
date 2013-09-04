@@ -16,14 +16,12 @@
 }
 
 .x-dock-body {
-//	background-color: #000000;
-//	background-image: url(../images/home_bg.png);
-//	background-repeat: no-repeat;
-	
 	h4, p {
 		color: #ffffff;
 	}
 }
+
+
 
 .about {
 	.x-tabbar {
@@ -33,10 +31,11 @@
 		.x-tab {
 			width: 30%;
 			padding-top: 5px;
-			padding-bottom: 5px;
-		}
+			padding-bottom: 5px;	
+			border-radius: 0;	
+		}		
 	}
-	
+		
 	.x-tabbar-dark {
 		background-image: none;
 		background-color: transparent;
