@@ -27,7 +27,8 @@ Ext.application({
     ],
 
     views: [
-        'Main'
+        'Main',
+		'AboutTabView'
     ],
 
     icon: {
@@ -53,7 +54,7 @@ Ext.application({
         Ext.fly('appLoadingIndicator').destroy();
 
         // Initialize the main view
-        Ext.Viewport.add(Ext.create('FaFa.view.Main'));
+        Ext.Viewport.add(Ext.create('FaFa.view.AboutTabView'));
     },
 
     onUpdated: function() {

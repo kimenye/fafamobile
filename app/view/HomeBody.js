@@ -7,7 +7,10 @@ Ext.define('FaFa.view.HomeBody', {
 		items: [{
 		        xtype : 'button',
 		        cls   : 'modus-button info',
-		        text  : 'What is FaFa models?'
+		        text  : 'What is FaFa models?',
+				handler : function() {
+					console.log('You have clicked on about...');
+				}
 		    },
 		    {
 		        xtype : 'button',
