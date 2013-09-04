@@ -21,6 +21,23 @@
 	}
 }
 
+.about-pane {
+	background-image: url(../images/kanga_pattern.jpg);
+	
+	.info-pane {
+		background-color: #F5F5F5;
+		padding: 10px;
+		border-radius: 0px 0px 10px 10px;
+		
+		h3 {
+			color: #0F6A40;
+		}
+		
+		p {
+			color: #414042;
+		}
+	}
+} 
 .about {
 	
 	.x-tabbar {
