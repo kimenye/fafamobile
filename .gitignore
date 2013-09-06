@@ -4,4 +4,4 @@ build
 *.sass-cache
 *.keystore
 *.idea
-*.template
+*.properties
