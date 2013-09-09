@@ -2,7 +2,8 @@ Ext.define('FaFa.view.AboutTabView', {
 	extend: 'Ext.tab.Panel',
 	xtype: 'about-tab-view',
 	requires: [
-		'FaFa.view.About'
+		'FaFa.view.About',
+		'FaFa.view.Register'
 	],
 	config: {
 		cls: 'about',
@@ -12,7 +13,8 @@ Ext.define('FaFa.view.AboutTabView', {
 				xtype: 'about-view'
 			},
 			{
-				title: 'Sign up'
+				title: 'Sign up',
+				xtype: 'register-view'
 			},
 			{
 				title: 'Fafa Kenya'
