@@ -55,6 +55,7 @@ Ext.application({
 
         // Initialize the main view
         Ext.Viewport.add(Ext.create('FaFa.view.AboutTabView'));
+		// Ext.Viewport.add(Ext.create('FaFa.view.Main'));
     },
 
     onUpdated: function() {

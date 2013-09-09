@@ -1,11 +1,11 @@
 Ext.define('FaFa.view.AboutTabView', {
 	extend: 'Ext.tab.Panel',
 	xtype: 'about-tab-view',
-	cls: 'about',
 	requires: [
 		'FaFa.view.About'
 	],
 	config: {
+		cls: 'about',
 		items: [
 			{
 				title: 'About',
