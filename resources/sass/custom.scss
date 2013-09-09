@@ -28,11 +28,7 @@
 	.info-pane {
 		background-color: #F5F5F5;
 		padding: 10px;
-
-		
-		h3 {
-			color: #0F6A40;
-		}
+				
 		
 		p {
 			color: #414042;
@@ -46,7 +42,19 @@
 	}
 } 
 
+.about-pane,
 .register-pane {
+	h3 {
+		color: #0F6A40;
+	}
+}
+
+.register-pane {
+	
+	.x-field, .x-container {
+		margin: 0 0 10px 0;
+	}
+	
 	.info-pane {
 		border-radius: 10px 10px 10px 10px;		
 		

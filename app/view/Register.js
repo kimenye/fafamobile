@@ -1,5 +1,5 @@
 Ext.define('FaFa.view.Register', {
-	extend: 'Ext.Panel',
+	extend: 'Ext.form.FormPanel',
 	requires: [
 		'Ext.form.FormPanel',
 		'Ext.field.Email'
@@ -7,14 +7,12 @@ Ext.define('FaFa.view.Register', {
 	xtype: 'register-view',
 	config: {
 		cls: 'register-pane',
-		styleHtmlContent: true,
-		items: [{
-			html: '<div class="info-pane"><h3>Become a FAFA Model today</h3><p>Its very simple to start.</p></div>'
-		},
-		{
-			xtype: 'formpanel',
-			items: [
-				{
+		styleHtmlContent: false,
+		items: [
+			{
+				html: "<h3>Become a model today!</h3>"
+			},
+			{
 					xtype: 'textfield',
 					label: 'Name',
 					placeholder: "What's your name?"
@@ -25,7 +23,5 @@ Ext.define('FaFa.view.Register', {
 					placeholder: "What's your email?"
 				}
 			]
-		}]
-	}
-	
+		}	
 });
