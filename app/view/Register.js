@@ -10,18 +10,27 @@ Ext.define('FaFa.view.Register', {
 		styleHtmlContent: false,
 		items: [
 			{
-				html: "<h3>Become a model today!</h3>"
+				xtype: 'fieldset',
+				title: 'Become a model today!',
+				instructions: 'Its simple to start',
+				items: [
+					{
+						xtype: 'textfield',
+						label: 'Name',
+						placeholder: "What's your name?"						
+					},
+					{
+						xtype: 'emailfield',
+						label: 'Email',
+						placeholder: "What's your email?"						
+					}
+				]
 			},
 			{
-					xtype: 'textfield',
-					label: 'Name',
-					placeholder: "What's your name?"
-				},
-				{
-					xtype: 'emailfield',
-					label: 'Email',
-					placeholder: "What's your email?"
-				}
-			]
-		}	
+				xtype: 'button',
+				text: 'Signup',
+				cls: 'modus-button primary signup'
+			}								
+		]
+	}	
 });

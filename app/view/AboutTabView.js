@@ -7,6 +7,7 @@ Ext.define('FaFa.view.AboutTabView', {
 	],
 	config: {
 		cls: 'about',
+		activeItem: 1,
 		items: [
 			{
 				title: 'About',

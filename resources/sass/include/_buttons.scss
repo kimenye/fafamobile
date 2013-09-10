@@ -23,6 +23,12 @@
   @include modus-button($base-color);
 }
 
+.signup {
+	width: 100px;
+	float: right;
+	margin-right: 10px;
+}
+
 .info {
   @include modus-button(#2c97de);
 }
