@@ -7,7 +7,7 @@ Ext.define('FaFa.view.AboutTabView', {
 	],
 	config: {
 		cls: 'about',
-		activeItem: 1,
+		// activeItem: 1,
 		items: [
 			{
 				title: 'About',
@@ -16,10 +16,10 @@ Ext.define('FaFa.view.AboutTabView', {
 			{
 				title: 'Sign up',
 				xtype: 'register-view'
-			},
+			}/*,
 			{
 				title: 'Fafa Kenya'
-			}
+			}*/
 		]
 	},
 	initialize: function() {
