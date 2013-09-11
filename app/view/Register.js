@@ -21,8 +21,8 @@ Ext.define('FaFa.view.Register', {
 					},
 					{
 						xtype: 'emailfield',
-						label: 'Email',
-						placeholder: "What's your email?"						
+						label: 'Email Address',
+						placeholder: "What's your email address?"						
 					}
 				]
 			},

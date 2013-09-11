@@ -7,3 +7,7 @@ This is the sencha application that runs within the web application. You need th
 - Run [sencha app build package ]
 - Run [ant deploy] 
 
+- To modify the css
+- Run [cd resources/sass]
+- Run [compass watch]
+
