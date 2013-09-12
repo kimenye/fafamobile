@@ -8,7 +8,9 @@ Ext.define('FaFa.view.Register', {
 	config: {
 		cls: 'register-pane',
 		styleHtmlContent: false,
-		items: [
+        submitOnAction: true,
+        url: 'http://localhost:3000/login',
+        items: [
 			{
 				xtype: 'fieldset',
 				title: 'Become a model today!',
