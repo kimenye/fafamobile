@@ -23,7 +23,15 @@ Ext.define('FaFa.view.Register', {
 						xtype: 'emailfield',
 						label: 'Email',
 						placeholder: "What's your email?"						
-					}
+					},
+                    {
+                        xtype: 'selectfield',
+                        label: 'Sex',
+                        options: [
+                            {text: 'Male',  value: '0'},
+                            {text: 'Female', value: '1'}
+                        ]
+                    }
 				]
 			},
 			{
