@@ -2,7 +2,9 @@ Ext.define('FaFa.view.Register', {
 	extend: 'Ext.form.FormPanel',
 	requires: [
 		'Ext.form.FormPanel',
-		'Ext.field.Email'
+		'Ext.field.Email',
+		'Ext.form.FieldSet',
+		'Ext.field.Select'
 	],
 	xtype: 'register-view',
 	config: {
@@ -28,10 +30,10 @@ Ext.define('FaFa.view.Register', {
 					},
                     {
                         xtype: 'selectfield',
-                        label: 'Sex',
+                        label: 'I am',
                         options: [
-                            {text: 'Male',  value: '0'},
-                            {text: 'Female', value: '1'}
+                            {text: 'Female', value: '1'},
+                            {text: 'Male',  value: '0'}
                         ]
                     }
 				]
