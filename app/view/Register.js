@@ -2,13 +2,17 @@ Ext.define('FaFa.view.Register', {
 	extend: 'Ext.form.FormPanel',
 	requires: [
 		'Ext.form.FormPanel',
-		'Ext.field.Email'
+		'Ext.field.Email',
+		'Ext.form.FieldSet',
+		'Ext.field.Select'
 	],
 	xtype: 'register-view',
 	config: {
 		cls: 'register-pane',
 		styleHtmlContent: false,
-		items: [
+        submitOnAction: true,
+        url: 'http://localhost:3000/login',
+        items: [
 			{
 				xtype: 'fieldset',
 				title: 'Become a model today!',
@@ -24,6 +28,14 @@ Ext.define('FaFa.view.Register', {
 						label: 'Email Address',
 						placeholder: "What's your email address?"						
 					}
+                    {
+                        xtype: 'selectfield',
+                        label: 'I am',
+                        options: [
+                            {text: 'Female', value: '1'},
+                            {text: 'Male',  value: '0'}
+                        ]
+                    }
 				]
 			},
 			{
