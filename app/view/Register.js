@@ -8,10 +8,10 @@ Ext.define('FaFa.view.Register', {
 	],
 	xtype: 'register-view',
 	config: {
-		cls: 'register-pane',
+		cls: 'register-pane',	
 		styleHtmlContent: false,
-        submitOnAction: true,
-        url: 'http://localhost:3000/login',
+        // submitOnAction: true,
+        // url: 'http://localhost:3000/login',
         items: [
 			{
 				xtype: 'fieldset',
@@ -35,14 +35,14 @@ Ext.define('FaFa.view.Register', {
                             {text: 'Female', value: '1'},
                             {text: 'Male',  value: '0'}
                         ]
-                    }
+                    }								
 				]
 			},
 			{
 				xtype: 'button',
 				text: 'Signup',
 				cls: 'modus-button primary signup'
-			}								
+			}
 		]
 	}	
 });

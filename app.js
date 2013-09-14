@@ -28,8 +28,13 @@ Ext.application({
 
     views: [
         'Main',
-		'AboutTabView'
+		'AboutTabView',
+		'Wizard'
     ],
+	
+	controllers: [
+		'WizardController'
+	],
 
     icon: {
         '57': 'resources/icons/Icon.png',
@@ -54,7 +59,7 @@ Ext.application({
         Ext.fly('appLoadingIndicator').destroy();
 
         // Initialize the main view
-        Ext.Viewport.add(Ext.create('FaFa.view.AboutTabView'));
+        Ext.Viewport.add(Ext.create('FaFa.view.Wizard'));
 		// Ext.Viewport.add(Ext.create('FaFa.view.Main'));
     },
 
