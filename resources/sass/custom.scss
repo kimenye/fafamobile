@@ -34,6 +34,10 @@ $title-color: #0F6A40;
 	.info-pane {
 		background-color: #F5F5F5;
 		padding: 10px;
+		
+		img {
+			max-width: 100%;
+		}
 				
 		
 		p {
@@ -45,7 +49,7 @@ $title-color: #0F6A40;
 .about-pane {
 	.info-pane {
 		border-radius: 0px 0px 10px 10px;
-		margin: 2em;
+		margin: 1em;
 	}
 } 
 
