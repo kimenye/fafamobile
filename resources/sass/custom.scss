@@ -27,6 +27,21 @@ $title-color: #0F6A40;
 	background-color: transparent;
 }
 
+.tour-pane.x-layout-card-item {
+	background: url('../images/kanga_pattern.jpg');
+}
+
+.tour-pane {
+	.x-layout-card-item {
+		margin: 10px;
+		border-radius: 5px;
+	}
+	
+	.x-carousel-indicator-horizontal {
+		height: 2.5em;
+	}
+}
+
 .about-pane,
 .register-pane {
 	background-image: url(../images/kanga_pattern.jpg);

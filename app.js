@@ -29,7 +29,8 @@ Ext.application({
     views: [
         'Main',
 		'AboutTabView',
-		'Wizard'
+		'Wizard',
+		'Tour'
     ],
 	
 	controllers: [
@@ -59,8 +60,20 @@ Ext.application({
         Ext.fly('appLoadingIndicator').destroy();
 
         // Initialize the main view
-        Ext.Viewport.add(Ext.create('FaFa.view.Wizard'));
+        // Ext.Viewport.add(Ext.create('FaFa.view.Wizard'));
 		// Ext.Viewport.add(Ext.create('FaFa.view.Main'));
+		
+		Ext.create('Ext.data.Store', {
+		    data: [
+		        { title: 'Ed',    description: 'The leaves are borne alternately on the stem. In most species they are 5 to 15 centimetres (2.0 to 5.9 in) long, pinnate, with leaflets and basal stipules; the leaflets usually have a serrated margin, and often a few small prickles on the underside of the stem. Most roses are deciduous but a few (particularly from South east Asia) are evergreen or nearly so.' },
+		        { title: 'Tommy', description: 'The leaves are borne alternately on the stem. In most species they are 5 to 15 centimetres (2.0 to 5.9 in) long, pinnate, with leaflets and basal stipules; the leaflets usually have a serrated margin, and often a few small prickles on the underside of the stem. Most roses are deciduous but a few (particularly from South east Asia) are evergreen or nearly so.' },
+		        { title: 'Aaron', description: 'The leaves are borne alternately on the stem. In most species they are 5 to 15 centimetres (2.0 to 5.9 in) long, pinnate, with leaflets and basal stipules; the leaflets usually have a serrated margin, and often a few small prickles on the underside of the stem. Most roses are deciduous but a few (particularly from South east Asia) are evergreen or nearly so.' },
+		        { title: 'Jamie', description: 'The leaves are borne alternately on the stem. In most species they are 5 to 15 centimetres (2.0 to 5.9 in) long, pinnate, with leaflets and basal stipules; the leaflets usually have a serrated margin, and often a few small prickles on the underside of the stem. Most roses are deciduous but a few (particularly from South east Asia) are evergreen or nearly so.' }
+		    ]
+		});
+		
+		
+		Ext.Viewport.add(Ext.create('FaFa.view.Tour'));
     },
 
     onUpdated: function() {
