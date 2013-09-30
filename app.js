@@ -8,7 +8,8 @@ Ext.application({
 
     views: [
         'Picture',
-		'Main'
+		'Main',
+		'TourCard'
     ],
 	
 	models: [
@@ -44,13 +45,13 @@ Ext.application({
 		
         carousel = Ext.create('Ext.Carousel', {
             store: store,
+			cls: 'tour',
             direction: 'horizontal',
             
             listeners: {
                 activeitemchange: function(carousel, item) {
-                    // info.setHtml(item.getPicture().get('title'));
-					
-					info.setHtml(item.getPicture().get('title') + "<a class='blink_me toggle_btn'></a>");
+					// debugger;
+					// info.setHtml(item.getPicture().get('title') + "<a class='blink_me toggle_btn'></a>");
                 }
             }
         });
@@ -63,7 +64,7 @@ Ext.application({
         });
 		
         Ext.Viewport.add(carousel);
-        Ext.Viewport.add(info);
+        // Ext.Viewport.add(info);
 
 		
 		var items = [];
@@ -72,10 +73,15 @@ Ext.application({
 				return;
 			}
 			
+			// items.push({
+// 				xtype: 'fafaimage',
+// 				picture: item 
+// 			});
 			items.push({
-				xtype: 'fafaimage',
-				picture: item 
-			});				
+				xtype: 'tour-card',
+				picture: item,
+				description: item.get('description')
+			})
 		});
 		
         carousel.setItems(items);
