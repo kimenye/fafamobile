@@ -8,3 +8,35 @@
 
 // Examples of using the icon mixin:
 // @include icon('user');
+
+.tour-title {
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    background-color: #000;
+    opacity: 0;
+    -webkit-transition: opacity 0.33s ease-out;
+}
+
+.tour-title-visible {
+    opacity: 0.65;
+}
+
+.x-img {
+    background-position: center;
+    background-color: #000;
+}
+
+.x-carousel-inner {
+    background-color: #000;
+}
+
+.x-carousel-indicator-dark span {
+    background-color: #eee;
+    opacity: 0.25;
+}
+
+.x-carousel-indicator-dark span.x-carousel-indicator-active  {
+    background-color: #aaa;
+    opacity: 0.9;
+}

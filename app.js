@@ -23,12 +23,21 @@ Ext.application({
     name: 'FaFa',
 
     requires: [
-        'Ext.MessageBox'
+        'Ext.MessageBox',
+		'Ext.carousel.Carousel'
     ],
 
     views: [
         'Main'
     ],
+	
+	models: [
+		'TourItem'
+	],
+	
+	stores: [
+		'TourStore'
+	],
 
     icon: {
         '57': 'resources/icons/Icon.png',
@@ -53,7 +62,64 @@ Ext.application({
         Ext.fly('appLoadingIndicator').destroy();
 
         // Initialize the main view
-        Ext.Viewport.add(Ext.create('FaFa.view.Main'));
+        // Ext.Viewport.add(Ext.create('FaFa.view.Main'));
+		
+		store = Ext.create('Ext.data.Store', {
+			model: 'FaFa.model.TourItem',
+			data: [
+				{ title: 'Welcome' },
+				{ title: 'What is it about?' },
+				{ title: 'How can I join?' }
+			]
+		});
+		
+		
+        carousel = Ext.create('Ext.Carousel', {
+            store: store,
+            direction: 'horizontal',
+            
+            listeners: {
+                activeitemchange: function(carousel, item) {
+                    info.setHtml(item.getPicture().get('title'));
+                }
+            }
+        });
+		
+        info = Ext.create('Ext.Component', {
+            cls: 'tour-title',
+            top: 0,
+            left: 0,
+            right: 0
+        });
+		
+        // var items = [];
+//         
+//         Ext.each(pictures, function(picture) {
+//             if (!picture.get('image')) {
+//                 return;
+//             }
+//             
+//             items.push({
+//                 xtype: 'apodimage',
+//                 picture: picture
+//             });
+//         });
+//         
+//         carousel.setItems(items);
+//         carousel.setActiveItem(0);
+		// debugger;
+		var items = [];
+		store.each(function(item) {
+			// debugger;
+			if (!item.get('image')) {
+				return;
+			}
+			
+			items.push({
+				xtype: 'fafaimage',
+				picture: picture 
+			});				
+		});
     },
 
     onUpdated: function() {
