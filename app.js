@@ -80,6 +80,7 @@ Ext.application({
 			items.push({
 				xtype: 'tour-card',
 				picture: item,
+				title: item.get('title'),
 				description: item.get('description')
 			})
 		});

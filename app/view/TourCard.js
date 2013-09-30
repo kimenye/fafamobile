@@ -4,9 +4,28 @@ Ext.define('FaFa.view.TourCard', {
 	config: {
 		picture: null,
 		description: null,
+		title: null,
         layout: 'card',
         cardSwitchAnimation: 'flip',
-		items: []
+		items: [
+			{
+				xtype: 'toolbar',
+				docked: 'top',
+				title: '',
+				items: [
+					{
+						xtype: 'button',
+				      	text: '?',
+						align: 'right'
+				    }
+				]
+			}
+		]
+	},
+	
+	applyTitle: function(title) {
+		console.log("Applying title", title);
+		// debugger;
 	},
 	
 	applyPicture: function(picture) {
