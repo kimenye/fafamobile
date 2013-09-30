@@ -28,7 +28,8 @@ Ext.application({
     ],
 
     views: [
-        'Main'
+        'Picture',
+		'Main'
     ],
 	
 	models: [
@@ -58,6 +59,10 @@ Ext.application({
     },
 
     launch: function() {
+		
+        var titleVisible = false,
+            info, carousel;
+			
         // Destroy the #appLoadingIndicator element
         Ext.fly('appLoadingIndicator').destroy();
 
@@ -67,9 +72,9 @@ Ext.application({
 		store = Ext.create('Ext.data.Store', {
 			model: 'FaFa.model.TourItem',
 			data: [
-				{ title: 'Welcome' },
-				{ title: 'What is it about?' },
-				{ title: 'How can I join?' }
+				{ title: 'Welcome', url: 'man.jpg' },
+				{ title: 'What is it about?', url: 'start.jpg' },
+				{ title: 'How can I join?', url: 'woman.jpg' }
 			]
 		});
 		
@@ -92,6 +97,9 @@ Ext.application({
             right: 0
         });
 		
+        Ext.Viewport.add(carousel);
+        Ext.Viewport.add(info);
+		
         // var items = [];
 //         
 //         Ext.each(pictures, function(picture) {
@@ -110,16 +118,30 @@ Ext.application({
 		// debugger;
 		var items = [];
 		store.each(function(item) {
-			// debugger;
 			if (!item.get('image')) {
 				return;
 			}
 			
 			items.push({
 				xtype: 'fafaimage',
-				picture: picture 
+				picture: item 
 			});				
 		});
+		
+        carousel.setItems(items);
+        carousel.setActiveItem(0);
+		
+        Ext.Viewport.element.on('tap', function(e) {
+            if (!e.getTarget('.x-carousel-indicator')) {
+                if (titleVisible) {
+                    info.element.removeCls('tour-title-visible');
+                    titleVisible = false;
+                } else {
+                    info.element.addCls('tour-title-visible');
+                    titleVisible = true;
+                }
+            }
+        });
     },
 
     onUpdated: function() {
