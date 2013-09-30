@@ -69,12 +69,14 @@ Ext.application({
         // Initialize the main view
         // Ext.Viewport.add(Ext.create('FaFa.view.Main'));
 		
+		var lorem = new Lorem;
+		
 		store = Ext.create('Ext.data.Store', {
 			model: 'FaFa.model.TourItem',
 			data: [
-				{ title: 'Welcome', url: 'man.jpg' },
-				{ title: 'What is it about?', url: 'start.jpg' },
-				{ title: 'How can I join?', url: 'woman.jpg' }
+				{ title: 'Welcome', url: 'man.jpg', description: lorem.createText(3, lorem.PARAGRAPH) },
+				{ title: 'What is it about?', url: 'start.jpg', description: lorem.createText(3, lorem.PARAGRAPH) },
+				{ title: 'How can I join?', url: 'woman.jpg', description: lorem.createText(3, lorem.PARAGRAPH) }
 			]
 		});
 		
@@ -85,13 +87,15 @@ Ext.application({
             
             listeners: {
                 activeitemchange: function(carousel, item) {
-                    info.setHtml(item.getPicture().get('title'));
+                    // info.setHtml(item.getPicture().get('title'));
+					
+					info.setHtml(item.getPicture().get('title') + "<a class='blink_me toggle_btn'></a>");
                 }
             }
         });
 		
         info = Ext.create('Ext.Component', {
-            cls: 'tour-title',
+            cls: 'tour-title tour-title-visible tour-tip',
             top: 0,
             left: 0,
             right: 0
@@ -99,23 +103,8 @@ Ext.application({
 		
         Ext.Viewport.add(carousel);
         Ext.Viewport.add(info);
+
 		
-        // var items = [];
-//         
-//         Ext.each(pictures, function(picture) {
-//             if (!picture.get('image')) {
-//                 return;
-//             }
-//             
-//             items.push({
-//                 xtype: 'apodimage',
-//                 picture: picture
-//             });
-//         });
-//         
-//         carousel.setItems(items);
-//         carousel.setActiveItem(0);
-		// debugger;
 		var items = [];
 		store.each(function(item) {
 			if (!item.get('image')) {
@@ -131,17 +120,17 @@ Ext.application({
         carousel.setItems(items);
         carousel.setActiveItem(0);
 		
-        Ext.Viewport.element.on('tap', function(e) {
-            if (!e.getTarget('.x-carousel-indicator')) {
-                if (titleVisible) {
-                    info.element.removeCls('tour-title-visible');
-                    titleVisible = false;
-                } else {
-                    info.element.addCls('tour-title-visible');
-                    titleVisible = true;
-                }
-            }
-        });
+        // Ext.Viewport.element.on('tap', function(e) {
+//             if (!e.getTarget('.x-carousel-indicator')) {
+//                 if (titleVisible) {
+//                     info.element.removeCls('tour-title-visible');
+//                     titleVisible = false;
+//                 } else {
+//                     info.element.addCls('tour-title-visible');
+//                     titleVisible = true;
+//                 }
+//             }
+//         });
     },
 
     onUpdated: function() {
