@@ -3,9 +3,7 @@ Ext.define('FaFa.view.HeaderToolbar', {
 	xtype: 'headertoolbar',
 	config: {
 		docked: 'top',
-		html: '<div class="header_logo"></div>',
-		cls: 'headerbg',
-		styleHtmlContent: true
+		html: '<div class="logo"><img src="resources/images/logo_title.png" /></div>'
 	},
 	initialize: function() {
 		this.callParent();

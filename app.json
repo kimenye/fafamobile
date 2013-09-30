@@ -49,6 +49,9 @@
 		{
 			"path" : "resources/js/lorem.js"
 		},
+		{
+			"path": "resources/js/zepto.min.js"
+		},
         {
             "path": "app.js",
             "bundle": true,  /* Indicates that all class dependencies are concatenated into this file when build */
