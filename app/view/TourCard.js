@@ -3,10 +3,10 @@ Ext.define('FaFa.view.TourCard', {
 	xtype: 'tour-card',	
 	config: {
 		picture: null,
-		description: null,
-		title: null,
+		content: null,
         layout: 'card',
         cardSwitchAnimation: 'flip',
+		pane: this,
 		items: [
 			{
 				xtype: 'toolbar',
@@ -14,29 +14,47 @@ Ext.define('FaFa.view.TourCard', {
 				title: '',
 				items: [
 					{
+						xtype: 'spacer'
+					},
+					{
 						xtype: 'button',
 				      	text: '?',
-						align: 'right'
+						align: 'right',
+						listeners: {
+							tap: function() {
+								console.log("clicked the tip button");
+								if (this.getText() == "?") {
+									this.setText('hide');									
+								}
+								else {
+									this.setText("?");									
+								}
+							}
+						}
 				    }
 				]
 			}
 		]
 	},
 	
-	applyTitle: function(title) {
-		console.log("Applying title", title);
-		// debugger;
-	},
+	initialize: function() {
+		
+	},	
 	
 	applyPicture: function(picture) {
-		console.log("Applying picture");		
+		// console.log("Applying picture");		
 		this.add({
 			xtype: 'fafaimage',	
 			picture: picture
 		});					
 	},
 	
-	applyDescription: function(description) {
-		console.log("Applying description");
+	applyContent: function(content) {
+		console.log("Applying content");
+		this.add({
+			xtype: 'about-view',
+			content: content
+		});
 	}
+	
 });

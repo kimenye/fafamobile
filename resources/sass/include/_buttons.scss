@@ -36,3 +36,7 @@
 .danger {
   @include modus-button(#e94b35);
 }
+
+.tip {
+  @include modus-button(#ccc);	
+}

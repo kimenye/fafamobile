@@ -5,7 +5,7 @@ Ext.define('FaFa.controller.WizardController', {
 	 	'FaFa.view.Register'
 	 ],
 	 refs: [
-	 	'registerButton'
+	 	'tourTipButton'
 	 ] 
  }
 });

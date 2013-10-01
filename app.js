@@ -9,7 +9,8 @@ Ext.application({
     views: [
         'Picture',
 		'Main',
-		'TourCard'
+		'TourCard',
+		'About'
     ],
 	
 	models: [
@@ -80,8 +81,7 @@ Ext.application({
 			items.push({
 				xtype: 'tour-card',
 				picture: item,
-				title: item.get('title'),
-				description: item.get('description')
+				content: item
 			})
 		});
 		
