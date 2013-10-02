@@ -37,9 +37,9 @@ Ext.application({
 		store = Ext.create('Ext.data.Store', {
 			model: 'FaFa.model.TourItem',
 			data: [
-				{ title: 'Welcome', url: 'man.jpg', description: lorem.createText(3, lorem.PARAGRAPH) },
-				{ title: 'What is it about?', url: 'start.jpg', description: lorem.createText(3, lorem.PARAGRAPH) },
-				{ title: 'How can I join?', url: 'woman.jpg', description: lorem.createText(3, lorem.PARAGRAPH) }
+				{ title: 'Welcome', url: 'man.jpg', description: lorem.createText(5, Lorem.TEXT) },
+				{ title: 'What is it about?', url: 'start.jpg', description: lorem.createText(4, Lorem.TEXT) },
+				{ title: 'How can I join?', url: 'woman.jpg', description: lorem.createText(6, Lorem.TEXT) }
 			]
 		});
 		

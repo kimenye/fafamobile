@@ -22,12 +22,14 @@ Ext.define('FaFa.view.TourCard', {
 						align: 'right',
 						listeners: {
 							tap: function() {
-								console.log("clicked the tip button");
+								var parent = this.parent.parent;
 								if (this.getText() == "?") {
 									this.setText('hide');									
+									parent.setActiveItem(2);
 								}
 								else {
 									this.setText("?");									
+									parent.setActiveItem(0);
 								}
 							}
 						}
