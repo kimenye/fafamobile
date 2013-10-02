@@ -2,7 +2,7 @@ Ext.define('FaFa.view.Wizard', {
 	extend: 'Ext.Panel',
 	xtype: 'wizard',
     requires: [
-		'FaFa.view.Register',
+		'FaFa.view.Register'
 	],
 	config: {
 		layout: 'card',

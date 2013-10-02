@@ -24,7 +24,7 @@ Ext.define('FaFa.view.TourCard', {
 							tap: function() {
 								var parent = this.parent.parent;
 								if (this.getText() == "?") {
-									this.setText('hide');									
+									this.setText('x');									
 									parent.setActiveItem(2);
 								}
 								else {
